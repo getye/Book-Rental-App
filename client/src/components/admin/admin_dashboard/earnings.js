@@ -13,7 +13,7 @@ export const Earnings = () => {
         const response = await axios.get('http://localhost:8001/admin/dashboard/earnings');
         const formattedData = response.data.map(item => ({
           name: item.catagory,
-          value: parseFloat(item.total_earnings) // Ensure value is a number
+          value: parseFloat(item.total_earnings) 
         }));
         setData(formattedData);
       } catch (error) {

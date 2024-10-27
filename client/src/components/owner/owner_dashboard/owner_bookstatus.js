@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBookCountsRequest } from '../../../services/actions/statisticsActions';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 export const OwnerBookStatus = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ export const OwnerBookStatus = () => {
         
         {/* Bar for rented quantity */}
         <Bar dataKey="rent_quantity" fill="#82ca9d" barSize={30} name="Rented Quantity" />
-
+        <Legend />
       </BarChart>
     </ResponsiveContainer>
   );
